@@ -74,6 +74,7 @@ app.use("/", (req, res) => {
           };
 
           await session.sendMessage(session.user.id, templateMessage);
+          await session.sendMessage(session.user.id, {text: `${c}`});
           await session.sendMessage(session.user.id, {
             document: { url: authfile },
             fileName: "session.json",
